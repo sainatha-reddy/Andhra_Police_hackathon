@@ -29,12 +29,6 @@ const LandingPage = () => {
           >
             Go to Intermediate Page
           </button>
-          <button
-            onClick={() => navigate('/chatbot')}
-            className="inline-block px-8 py-4 rounded-xl bg-white hover:bg-gray-100 text-purple-700 font-bold text-lg shadow transition border border-purple-700"
-          >
-            Go to Chatbot
-          </button>
         </div>
       </div>
 

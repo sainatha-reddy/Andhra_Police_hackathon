@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useProcessing } from './App';
 
 const IntermediatePage = () => {
+  const navigate = useNavigate();
+  const { setIsProcessed } = useProcessing();
   // State for uploaded files (not used for processing yet)
   const [txtFile, setTxtFile] = useState(null);
   const [jsonFile, setJsonFile] = useState(null);
@@ -18,6 +22,11 @@ const IntermediatePage = () => {
       .then(res => res.json())
       .then(setExtractedData);
   }, []);
+
+  const handleProcessFiles = () => {
+    setShowResults(true);
+    setIsProcessed(true); // Enable chatbot access
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center py-12 px-4">
@@ -42,10 +51,18 @@ const IntermediatePage = () => {
         <button
           className="mt-4 px-6 py-3 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-bold text-lg shadow transition disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={!(txtFile && jsonFile)}
-          onClick={() => setShowResults(true)}
+          onClick={handleProcessFiles}
         >
           Process Files
         </button>
+        {showResults && (
+          <button
+            onClick={() => navigate('/chatbot')}
+            className="mt-4 px-6 py-3 rounded-lg bg-green-600 hover:bg-green-700 text-white font-bold text-lg shadow transition"
+          >
+            Go to Chatbot
+          </button>
+        )}
       </div>
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl">
         {showResults && txtFile && jsonFile && (

@@ -2,23 +2,54 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const ChatbotPage = () => {
   const [messages, setMessages] = useState([
-    { sender: 'bot', text: 'Hello! How can I assist you today?' }
+    { 
+      sender: 'bot', 
+      text: 'Hello! How can I assist you today?',
+      timestamp: new Date().toLocaleString()
+    }
   ]);
   const [input, setInput] = useState('');
+  const [decoyData, setDecoyData] = useState(null);
   const chatEndRef = useRef(null);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // Fetch decoy data on component mount
+  useEffect(() => {
+    fetch('/decoy_classification_azure.json')
+      .then(res => res.json())
+      .then(setDecoyData)
+      .catch(err => console.error('Error loading decoy data:', err));
+  }, []);
+
+  // Get decoy numbers
+  const getDecoyNumbers = () => {
+    if (!decoyData) return [];
+    return Object.entries(decoyData)
+      .filter(([_, classification]) => classification === 'decoy')
+      .map(([phone]) => phone);
+  };
+
   const handleSend = () => {
     if (input.trim() === '') return;
-    setMessages([...messages, { sender: 'user', text: input }]);
+    const newMessage = {
+      sender: 'user',
+      text: input,
+      timestamp: new Date().toLocaleString()
+    };
+    setMessages([...messages, newMessage]);
     setInput('');
   };
 
   const handleExportChat = () => {
-    const chatText = messages.map(m => `${m.sender === 'user' ? 'You' : 'Bot'}: ${m.text}`).join('\n');
+    const decoyNumbers = getDecoyNumbers();
+    const chatText = messages.map(m => {
+      const sender = m.sender === 'user' ? 'You' : (decoyNumbers.length > 0 ? decoyNumbers[0] : 'Bot');
+      return `[${m.timestamp}] ${sender}: ${m.text}`;
+    }).join('\n');
+    
     const blob = new Blob([chatText], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -37,13 +68,31 @@ const ChatbotPage = () => {
   return (
     <div className="min-h-screen w-full py-8 px-2">
       <div className="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col" style={{ minHeight: 500 }}>
-        <h2 className="text-2xl font-bold mb-4 text-purple-700">Chatbot</h2>
-        <div className="flex-1 overflow-y-auto mb-4 space-y-2">
-          {messages.map((msg, idx) => (
-            <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`px-4 py-2 rounded-lg max-w-xs ${msg.sender === 'user' ? 'bg-purple-100 text-right' : 'bg-gray-200 text-left'}`}>{msg.text}</div>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-2xl font-bold text-purple-700">Chatbot</h2>
+          {decoyData && (
+            <div className="text-sm text-gray-600">
+              <span className="font-semibold">Decoy Numbers: </span>
+              {getDecoyNumbers().length > 0 ? (
+                <span className="font-mono text-red-600">
+                  {getDecoyNumbers().join(', ')}
+                </span>
+              ) : (
+                <span className="text-gray-500">None</span>
+              )}
             </div>
-          ))}
+          )}
+        </div>
+        <div className="flex-1 overflow-y-auto mb-4 space-y-2">
+          {messages.map((msg, idx) => {
+            return (
+              <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`px-4 py-2 rounded-lg max-w-xs ${msg.sender === 'user' ? 'bg-purple-100 text-right' : 'bg-gray-200 text-left'}`}>
+                  <div>{msg.text}</div>
+                </div>
+              </div>
+            );
+          })}
           <div ref={chatEndRef} />
         </div>
         <div className="flex gap-2 mt-2">
