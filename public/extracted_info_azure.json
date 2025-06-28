@@ -1,0 +1,100 @@
+[
+    {
+        "mobile_number": "919988776655",
+        "timestamp": "20/06/2025, 08:59",
+        "message": "🌟 *WORK FROM HOME OPPORTUNITY!* Tired of job hunting? We’re hiring part-time associates for a premium US-based client. ✔️ Payouts: ₹5,000–₹25,000/week ✔️ Flexible hours ✔️ No prior experience needed Fill this 1-minute interest form: https://bit.ly/WorkConnectApply",
+        "extracted": {
+            "upi_ids": [],
+            "emails": [],
+            "bank_accounts": [],
+            "links": [
+                "https://bit.ly/WorkConnectApply"
+            ],
+            "phone_numbers": [],
+            "social_handles": [],
+            "optional_info": []
+        }
+    },
+    {
+        "mobile_number": "919988776655",
+        "timestamp": "20/06/2025, 09:01",
+        "message": "Thanks for the feedback 😊 We’ve been operational since 2021. Check our Insta: @workconnect_india",
+        "extracted": {
+            "upi_ids": [],
+            "emails": [],
+            "bank_accounts": [],
+            "links": [],
+            "phone_numbers": [],
+            "social_handles": [
+                "@workconnect_india"
+            ],
+            "optional_info": []
+        }
+    },
+    {
+        "mobile_number": "919988776655",
+        "timestamp": "20/06/2025, 09:06",
+        "message": "Great! You’ll get your onboarding task pack after registration. 🔒 *One-time fee*: ₹799 📥 Pay via UPI: `9988776655@oksbi` (RealJob Connect Pvt Ltd) 🧾 Send screenshot here for confirmation.",
+        "extracted": {
+            "upi_ids": [
+                "9988776655@oksbi"
+            ],
+            "emails": [],
+            "bank_accounts": [],
+            "links": [],
+            "phone_numbers": [],
+            "social_handles": [],
+            "optional_info": []
+        }
+    },
+    {
+        "mobile_number": "918877012345",
+        "timestamp": "20/06/2025, 09:16",
+        "message": "I just paid ₹799 to `9988776655@oksbi`. Let's see.",
+        "extracted": {
+            "upi_ids": [
+                "9988776655@oksbi"
+            ],
+            "emails": [],
+            "bank_accounts": [],
+            "links": [],
+            "phone_numbers": [],
+            "social_handles": [],
+            "optional_info": []
+        }
+    },
+    {
+        "mobile_number": "918877012345",
+        "timestamp": "21/06/2025, 08:47",
+        "message": "Alright, I just paid ₹499 to `workconnect@oksbi`. Waiting for confirmation.",
+        "extracted": {
+            "upi_ids": [
+                "workconnect@oksbi"
+            ],
+            "emails": [],
+            "bank_accounts": [],
+            "links": [],
+            "phone_numbers": [],
+            "social_handles": [],
+            "optional_info": []
+        }
+    },
+    {
+        "mobile_number": "919988776655",
+        "timestamp": "21/06/2025, 08:53",
+        "message": "Fair question. We’re GST-registered, CIN-listed, and operational since 2021. 📩 support@workconnect.co.in | CIN: U74110MH2024PTC778899",
+        "extracted": {
+            "upi_ids": [],
+            "emails": [
+                "support@workconnect.co.in"
+            ],
+            "bank_accounts": [],
+            "links": [],
+            "phone_numbers": [],
+            "social_handles": [],
+            "optional_info": [
+                "U74110MH2024PTC778899"
+            ]
+        }
+    }
+]

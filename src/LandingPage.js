@@ -23,6 +23,12 @@ const LandingPage = () => {
           >
             Go to Dashboard
           </button>
+          <button
+            onClick={() => navigate('/intermediate')}
+            className="inline-block px-8 py-4 rounded-xl bg-white hover:bg-gray-100 text-green-700 font-bold text-lg shadow transition border border-green-700"
+          >
+            Go to Intermediate Page
+          </button>
         </div>
       </div>
 
