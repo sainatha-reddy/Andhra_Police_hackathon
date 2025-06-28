@@ -522,6 +522,9 @@ const UserProfile = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8 relative z-10">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-red-700 mb-10 drop-shadow-lg tracking-tight">
+          Suspected Scammers User Profile
+        </h1>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -535,7 +538,9 @@ const UserProfile = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Select Profile</h2>
+            <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center drop-shadow-md">
+              Select Profile
+            </h2>
             <ProfileGrid>
               {profiles.map((profile, index) => (
                 <ProfileCard
