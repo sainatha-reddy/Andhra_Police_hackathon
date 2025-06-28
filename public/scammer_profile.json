@@ -1,0 +1,63 @@
+{
+    "id": 1,
+    "merchant_info": {
+        "merchant_id": "929292",
+        "ifsc_code": "1212",
+        "bank_name": "sbi",
+        "account_number_1": "98181",
+        "account_number_2": "98182",
+        "registered_merchant_name": "",
+        "merchant_business_name_description": "",
+        "mobile_number_registered": "",
+        "email_id_registered": "",
+        "date_of_account_creation": "",
+        "linked_bank_accounts": [],
+        "kyc_documents_submitted": []
+    },
+    "platform_info": {
+        "mobile_number_registered": "99999999",
+        "platform": "",
+        "handle_profile_url": "",
+        "date_of_access_or_login": "",
+        "ip_address": "",
+        "device_type": "",
+        "login_location": {
+            "city": "",
+            "state": ""
+        },
+        "sim_holder_name": "",
+        "id_proof_submitted_during_activation": "",
+        "registered_address": "",
+        "date_of_activation": "",
+        "service_provider_name": "",
+        "sim_retailer": {
+            "name": "",
+            "outlet_address": ""
+        }
+    },
+    "account_info": {
+        "account_holder_full_name": "",
+        "fathers_name": "",
+        "registered_address_as_per_kyc": "",
+        "mobile_number_linked": "",
+        "email_id_linked": "",
+        "date_of_account_opening": "",
+        "mode_of_account_opening": "",
+        "kyc_documents_submitted": [],
+        "last_10_transactions": []
+    },
+    "sent_to_dot": true,
+    "sent_to_bank": false,
+    "sent_to_meta": false,
+    "sent_to_payment": false,
+    "reply_from_dot": true ,
+    "reply_from_bank": false,
+    "reply_from_meta": false,
+    "reply_from_payment": false,
+    "dot_attachment": "DOT Attachment.xlsx",
+    "bank_attachment": "Bank Attachment.xlsx",
+    "meta_attachment": "Meta Attachment.xlsx",
+    "payment_attachment": "Payment Gateway Attachment.xlsx"
+}
+
+

@@ -1,0 +1,61 @@
+{
+    "id": 3,
+    "merchant_info": {
+        "merchant_id": "767676",
+        "ifsc_code": "5656",
+        "bank_name": "icici",
+        "account_number_1": "76543",
+        "account_number_2": "76544",
+        "registered_merchant_name": "Digital Marketing Pro",
+        "merchant_business_name_description": "Online Marketing Services",
+        "mobile_number_registered": "8765432109",
+        "email_id_registered": "digital@example.com",
+        "date_of_account_creation": "2023-08-22",
+        "linked_bank_accounts": ["76543"],
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card"]
+    },
+    "platform_info": {
+        "mobile_number_registered": "8765432109",
+        "platform": "Telegram",
+        "handle_profile_url": "t.me/digitalpro",
+        "date_of_access_or_login": "2024-02-15",
+        "ip_address": "10.0.0.50",
+        "device_type": "iPhone",
+        "login_location": {
+            "city": "Bangalore",
+            "state": "Karnataka"
+        },
+        "sim_holder_name": "Priya Patel",
+        "id_proof_submitted_during_activation": "PAN Card",
+        "registered_address": "456 Digital Lane, Koramangala, Bangalore - 560034",
+        "date_of_activation": "2023-07-20",
+        "service_provider_name": "Jio",
+        "sim_retailer": {
+            "name": "Jio Center",
+            "outlet_address": "Koramangala, Bangalore"
+        }
+    },
+    "account_info": {
+        "account_holder_full_name": "Priya Patel",
+        "fathers_name": "Amit Patel",
+        "registered_address_as_per_kyc": "456 Digital Lane, Koramangala, Bangalore - 560034",
+        "mobile_number_linked": "8765432109",
+        "email_id_linked": "priya@example.com",
+        "date_of_account_opening": "2023-08-22",
+        "mode_of_account_opening": "Branch",
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card", "Passport"],
+        "last_10_transactions": ["RTGS", "UPI Transfer", "Cheque Deposit"]
+    },
+    "sent_to_dot": true,
+    "sent_to_bank": false,
+    "sent_to_meta": true,
+    "sent_to_payment": false,
+    "reply_from_dot": false,
+    "reply_from_bank": false,
+    "reply_from_meta": false,
+    "reply_from_payment": false,
+    "dot_attachment": "DOT Attachment.xlsx",
+    "bank_attachment": "Bank Attachment.xlsx",
+    "meta_attachment": "Meta Attachment.xlsx",
+    "payment_attachment": "Payment Gateway Attachment.xlsx"
+} 

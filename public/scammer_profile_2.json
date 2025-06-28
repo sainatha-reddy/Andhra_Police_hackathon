@@ -1,0 +1,61 @@
+{
+    "id": 2,
+    "merchant_info": {
+        "merchant_id": "848484",
+        "ifsc_code": "3434",
+        "bank_name": "hdfc",
+        "account_number_1": "87654",
+        "account_number_2": "87655",
+        "registered_merchant_name": "Tech Solutions Ltd",
+        "merchant_business_name_description": "Digital Services Provider",
+        "mobile_number_registered": "9876543210",
+        "email_id_registered": "tech@example.com",
+        "date_of_account_creation": "2023-06-15",
+        "linked_bank_accounts": ["87654", "87655"],
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card", "Business License"]
+    },
+    "platform_info": {
+        "mobile_number_registered": "9876543210",
+        "platform": "WhatsApp",
+        "handle_profile_url": "wa.me/9876543210",
+        "date_of_access_or_login": "2024-01-20",
+        "ip_address": "192.168.1.100",
+        "device_type": "Android",
+        "login_location": {
+            "city": "Mumbai",
+            "state": "Maharashtra"
+        },
+        "sim_holder_name": "Rahul Sharma",
+        "id_proof_submitted_during_activation": "Aadhar Card",
+        "registered_address": "123 Tech Park, Andheri West, Mumbai - 400058",
+        "date_of_activation": "2023-05-10",
+        "service_provider_name": "Airtel",
+        "sim_retailer": {
+            "name": "Airtel Store",
+            "outlet_address": "Andheri West, Mumbai"
+        }
+    },
+    "account_info": {
+        "account_holder_full_name": "Rahul Sharma",
+        "fathers_name": "Rajesh Sharma",
+        "registered_address_as_per_kyc": "123 Tech Park, Andheri West, Mumbai - 400058",
+        "mobile_number_linked": "9876543210",
+        "email_id_linked": "rahul@example.com",
+        "date_of_account_opening": "2023-06-15",
+        "mode_of_account_opening": "Online",
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card", "Address Proof"],
+        "last_10_transactions": ["UPI Transfer", "NEFT", "IMPS"]
+    },
+    "sent_to_dot": false,
+    "sent_to_bank": true,
+    "sent_to_meta": false,
+    "sent_to_payment": true,
+    "reply_from_dot": false,
+    "reply_from_bank": true,
+    "reply_from_meta": false,
+    "reply_from_payment": false,
+    "dot_attachment": "DOT Attachment.xlsx",
+    "bank_attachment": "Bank Attachment.xlsx",
+    "meta_attachment": "Meta Attachment.xlsx",
+    "payment_attachment": "Payment Gateway Attachment.xlsx"
+} 

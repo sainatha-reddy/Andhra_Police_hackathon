@@ -1,0 +1,61 @@
+{
+    "id": 4,
+    "merchant_info": {
+        "merchant_id": "656565",
+        "ifsc_code": "7878",
+        "bank_name": "axis",
+        "account_number_1": "65432",
+        "account_number_2": "65433",
+        "registered_merchant_name": "E-Commerce Solutions",
+        "merchant_business_name_description": "Online Retail Platform",
+        "mobile_number_registered": "7654321098",
+        "email_id_registered": "ecommerce@example.com",
+        "date_of_account_creation": "2023-10-05",
+        "linked_bank_accounts": ["65432", "65433", "65434"],
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card", "GST Certificate", "Business Registration"]
+    },
+    "platform_info": {
+        "mobile_number_registered": "7654321098",
+        "platform": "Instagram",
+        "handle_profile_url": "instagram.com/ecommercesolutions",
+        "date_of_access_or_login": "2024-03-10",
+        "ip_address": "172.16.0.25",
+        "device_type": "Desktop",
+        "login_location": {
+            "city": "Delhi",
+            "state": "Delhi"
+        },
+        "sim_holder_name": "Vikram Singh",
+        "id_proof_submitted_during_activation": "Driving License",
+        "registered_address": "789 Business Hub, Connaught Place, Delhi - 110001",
+        "date_of_activation": "2023-09-15",
+        "service_provider_name": "Vodafone",
+        "sim_retailer": {
+            "name": "Vodafone Store",
+            "outlet_address": "Connaught Place, Delhi"
+        }
+    },
+    "account_info": {
+        "account_holder_full_name": "Vikram Singh",
+        "fathers_name": "Harinder Singh",
+        "registered_address_as_per_kyc": "789 Business Hub, Connaught Place, Delhi - 110001",
+        "mobile_number_linked": "7654321098",
+        "email_id_linked": "vikram@example.com",
+        "date_of_account_opening": "2023-10-05",
+        "mode_of_account_opening": "Online",
+        "kyc_documents_submitted": ["PAN Card", "Aadhar Card", "Business Address Proof"],
+        "last_10_transactions": ["UPI Transfer", "NEFT", "RTGS", "Cheque Withdrawal"]
+    },
+    "sent_to_dot": true,
+    "sent_to_bank": true,
+    "sent_to_meta": true,
+    "sent_to_payment": true,
+    "reply_from_dot": true,
+    "reply_from_bank": true,
+    "reply_from_meta": true,
+    "reply_from_payment": true,
+    "dot_attachment": "DOT Attachment.xlsx",
+    "bank_attachment": "Bank Attachment.xlsx",
+    "meta_attachment": "Meta Attachment.xlsx",
+    "payment_attachment": "Payment Gateway Attachment.xlsx"
+} 
