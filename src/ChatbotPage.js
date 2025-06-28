@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatbotPage = () => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState([
     { 
       sender: 'bot', 
@@ -46,7 +48,7 @@ const ChatbotPage = () => {
   const handleExportChat = () => {
     const decoyNumbers = getDecoyNumbers();
     const chatText = messages.map(m => {
-      const sender = m.sender === 'user' ? 'You' : (decoyNumbers.length > 0 ? decoyNumbers[0] : 'Bot');
+      const sender = m.sender === 'user' ? (decoyNumbers.length > 0 ? decoyNumbers[0] : 'U') : 'Chatbot';
       return `[${m.timestamp}] ${sender}: ${m.text}`;
     }).join('\n');
     
@@ -59,6 +61,11 @@ const ChatbotPage = () => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    
+    // Redirect to UserProfile after download
+    setTimeout(() => {
+      navigate('/dashboard');
+    }, 100);
   };
 
   const handleKeyDown = (e) => {
@@ -72,7 +79,7 @@ const ChatbotPage = () => {
           <h2 className="text-2xl font-bold text-purple-700">Chatbot</h2>
           {decoyData && (
             <div className="text-sm text-gray-600">
-              <span className="font-semibold">Decoy Numbers: </span>
+              <span className="font-semibold">Decoy Number: </span>
               {getDecoyNumbers().length > 0 ? (
                 <span className="font-mono text-red-600">
                   {getDecoyNumbers().join(', ')}
